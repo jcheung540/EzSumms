@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        * {
+        padding-left: 10%;
+        padding-right: 10%;
+        }
+        body {
+        margin-bottom:20%;
+        margin-top:5%;
+        }
+        h1 {
+        text-align: center;
+        }
+    </style>
+    <title>News Summaries</title>
+    </head>
+<body>
+	<div class='Fox'>
+		<h1>{{Page_Fox[0]}}</h1>
+		<h4>{{Page_Fox[1]}}</h4>
+		{%for title,one_word,article in Page_Fox[2]%}
+			<h2>{{title}}</h2>
+			<h4>{{one_word}}</h4>
+			<p>{{article}}</p>
+		{%endfor%}
+	</div>
+	<div class ='MSNBC'>
+		<h1>{{Page_MSNBC[0]}}</h1>
+		<h4>{{Page_MSNBC[1]}}</h4>
+		{%for title,one_word,article in Page_MSNBC[2]%}
+			<h2>{{title}}</h2>
+			<h4>{{one_word}}</h4>
+			<p>{{article}}</p>
+		{%endfor%}
+	</div>
+
+</body>
+</html>
