@@ -5,7 +5,7 @@ from selenium import webdriver
 
 GOOGLE_CHROME_BIN = '/app/.apt/usr/bin/google-chrome'
 CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
-chrome_options = ChromeOptions()
+chrome_options = driver.ChromeOptions()
 chrome_options.binary_location = GOOGLE_CHROME_BIN
 # chrome_options.add_argument('--disable-gpu')
 # chrome_options.add_argument('--no-sandbox')
