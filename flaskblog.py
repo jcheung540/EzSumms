@@ -5,11 +5,11 @@ from selenium import webdriver
 
 GOOGLE_CHROME_BIN = '/app/.apt/usr/bin/google-chrome'
 CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
-chrome_options = Options()
-chrome_options.binary_location = GOOGLE_CHROME_BIN
-chrome_options.add_argument('--disable-gpu')
-chrome_options.add_argument('--no-sandbox')
-driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, chrome_options=chrome_options)
+# chrome_options = Options()
+# chrome_options.binary_location = GOOGLE_CHROME_BIN
+# chrome_options.add_argument('--disable-gpu')
+# chrome_options.add_argument('--no-sandbox')
+driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH) #chrome_options=chrome_options)
 
 import nltk
 from nltk.corpus import stopwords
