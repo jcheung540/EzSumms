@@ -2,10 +2,14 @@ from flask import Flask, render_template
 import requests
 from bs4 import BeautifulSoup
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-options = Options()
-options.headless = True
-driver = webdriver.Chrome('/Users/jamescheung/Flask_Blog/chromedriver', options=options)
+
+GOOGLE_CHROME_BIN = '/app/.apt/usr/bin/google-chrome'
+chrome_options = Options()
+chrome_options.binary_location = GOOGLE_CHROME_BIN
+chrome_options.add_argument('--disable-gpu')
+chrome_options.add_argument('--no-sandbox')
+driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, chrome_options=chrome_options)
+
 import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize, sent_tokenize
